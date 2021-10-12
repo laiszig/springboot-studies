@@ -1,9 +1,22 @@
 package com.estudos.springboot.student;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity //this is for hibernate (***)
+@Table //this is for the table in the db
 public class Student {
-
+    @Id //mandatory, we need it to inform what is the PK of this entity in the db //still not clear how @SequenceGenerator annotation works (***)
+    @SequenceGenerator(
+            name= "student_sequence",
+            sequenceName = "student_sequence",
+            allocationSize = 1
+    )
+    // this annotation is used to declare that the generation of the pk is the db's responsibility
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "student_sequence"
+    )
     private Long id;
     private String name;
     private String email;
