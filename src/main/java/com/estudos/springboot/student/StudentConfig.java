@@ -8,6 +8,8 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 
+import static java.time.Month.*;
+
 // (***)
 @Configuration
 public class StudentConfig {
@@ -19,14 +21,12 @@ public class StudentConfig {
                     1L,
                     "Mariam",
                     "mariam.jamal@gmail.com",
-                    LocalDate.of(2000, Month.JANUARY, 5),
-                    21
+                    LocalDate.of(2000, JANUARY, 5)
             );
             Student alex = new Student(
                     "Alex",
                     "alex.jamal@gmail.com",
-                    LocalDate.of(2001, Month.JULY, 20),
-                    20
+                    LocalDate.of(2004, JULY, 20)
             );
 
             studentRepository.saveAll(

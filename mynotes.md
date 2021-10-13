@@ -18,5 +18,5 @@ This annotation has a automatic translation feature. For example, when an except
 
 
 
-##TOFIX
-still having problems with the database tab and finding the schemas of the db
+##fix
+still having problems connecting to the database tab and finding the schemas of the db
